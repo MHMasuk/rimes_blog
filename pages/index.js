@@ -1,36 +1,25 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+// import React, {use} from 'react';
+// import Head from 'next/head'
+// import Image from 'next/image'
+import { Inter } from "@next/font/google";
+// import styles from '@/styles/Home.module.css'
+import BlogList from "@/components/Blog/BlogList";
 
-const inter = Inter({ subsets: ['latin'] })
+import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
 
-const Header = () => {
-    return (
-            <header className="bg-gray-800 text-white p-4">
-                <h1 className="text-xl font-bold">My App</h1>
-            </header>
-            );
-};
-
-const Footer = () => {
-    return (
-            <footer className="bg-gray-800 text-white p-4">
-                <p>&copy; 2023 My App</p>
-            </footer>
-            );
-};
+// const inter = Inter({subsets: ['latin']})
 
 export default function Home() {
   return (
     <>
-         <div>
-                <Header />
-                <main className="p-4">
-                    {/* Your app content goes here */}
-                </main>
-                <Footer />
-         </div>
+      <div>
+        <Header />
+        <main className="p-4">
+          <BlogList />
+        </main>
+        <Footer />
+      </div>
     </>
-  )
+  );
 }
